@@ -321,7 +321,9 @@ void init_editor(struct editor_config *econf)
     econf->statusmsg[0] = '\0';
     econf->statusmsg_time = 0;
 
-    if (get_window_size(&econf->screen_rows, &econf->screen_cols) == -1) die("get_window_size");
+    if (get_window_size(&econf->screen_rows, &econf->screen_cols) == -1)
+        die("get_window_size");
+
     econf->screen_rows -= 1;
 }
 
